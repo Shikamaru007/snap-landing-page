@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
 }
 html {
     font-size: 18px;
@@ -12,6 +14,214 @@ html {
     --medium-gray: hsl(0, 0%, 41%);
     --almost-black: hsl(0, 0%, 8%);
 }
-body {
-    font-family: "Epilogue", sans-serif;
+body{
+    display: flex;
+    width: 100%;
+    padding: 1.5rem 0 3rem;
+    min-height: 100vh;
+    justify-content: center;
+}
+body.open-nav{
+    overflow: hidden;
+}
+body.open-nav .mobileNav-modal{
+    display: flex;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    height: 100%;
+    max-width: 35rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+}
+.logo {
+    width: 5rem;
+}
+.menu {
+    width: 2rem;
+    cursor: pointer;
+}
+.image img {
+    width: 100%;
+}
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.hero-details{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+h1{
+    color: var(--almost-black);
+    font-size: 1.95rem;
+    font-weight: 700;
+}
+.hero-details p{
+    color: var(--medium-gray);
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+.btn {
+    text-decoration: none;
+    padding: 1.15rem 1.3rem;
+    display: flex;
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    width: max-content;
+   text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: .7rem;
+    font-size: .85rem;
+    border: 1px solid transparent;
+    line-height: 0;
+}
+.btn:hover{
+    background-color: var(--almost-white);
+    border: 1px solid var(--almost-black);
+    color: var(--almost-black);
+}
+.affiliated-companies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+.affiliated-companies div{
+    width: 100%;
+}
+.affiliated-companies img{
+    width: 100%;
+}
+.mobileNav-modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: end;
+}
+.mobile-nav-container{
+    width: 65%;
+    max-width: 18rem;
+    height: 100%;
+    background-color: var(--almost-white);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.close-menu{
+    width: 10%;
+    align-self: end;
+    cursor: pointer;
+
+}
+.mobile-nav ul.mainNav {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+    color: var(--medium-gray);
+}
+.main-nav-list,
+.dropdown{
+    padding: .7rem;
+    display: flex;
+    max-width: max-content;
+    text-decoration: none;
+    color: var(--medium-gray);
+    cursor: pointer;
+    align-items: center;
+}
+.main-nav-list:hover,
+.dropdown:hover{
+    color: var(--almost-black);
+}
+.dropdown::after{
+    content: url(images/icon-arrow-down.svg);
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s linear;
+}
+.dropdown.preview::after{
+    transform: rotate(180deg);
+}
+.mobile-nav ul li .options ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    pad: 1rem;
+    padding-left: 1.5rem;
+}
+.mobile-nav ul li .options{
+    overflow: hidden;
+    height: 0;
+    transition: all 0.15s linear;
+}
+.mobile-nav ul li .options ul a{
+    text-decoration: none;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    padding: .7rem 1rem;
+    cursor: pointer;
+}
+.mobile-nav ul li .options ul a:hover{
+    color: var(--almost-black);
+}
+.mobile-nav ul li .options ul a img{
+    width: 1.05em;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .2rem;
+}
+.buttons a{
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 1.4rem;
+    line-height: 0;
+    border: 2px solid transparent;
+}
+.buttons a:hover{
+    border: 2px solid var(--almost-black);
+    border-radius: 15px;
+    color: var(--almost-black);
+}
+.buttons a:nth-child(2){
+    border: 2px solid var(--almost-black);
+    border-radius: 15px;
+}
+.buttons a:nth-child(2):hover{
+    background-color: var(--almost-black);
+    color: var(--almost-white);
 }
