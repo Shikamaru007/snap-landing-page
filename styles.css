@@ -41,13 +41,24 @@ header{
     padding: 0 1.2rem;
 }
 .logo {
-    width: 5rem;
+    max-width: 6.5rem;
+    display: flex;
+    flex-shrink: 0;
+    
 }
+.logo img {
+    width: 100%;
+    min-width: 6.5rem;
+}
+.desktop-image {
+    display: none;
+}
+
 .menu {
     width: 2rem;
     cursor: pointer;
 }
-.image img {
+.mobile-image {
     width: 100%;
 }
 .hero-section{
@@ -125,7 +136,7 @@ h1{
 }
 .mobile-nav-container{
     width: 65%;
-    max-width: 18rem;
+    max-width: 15rem;
     height: 100%;
     background-color: var(--almost-white);
     padding: 1.5rem 1rem;
@@ -157,7 +168,8 @@ h1{
     align-items: center;
 }
 .main-nav-list:hover,
-.dropdown:hover{
+.dropdown:hover,
+.desktop-nav li a:hover{
     color: var(--almost-black);
 }
 .dropdown::after{
@@ -224,4 +236,184 @@ h1{
 .buttons a:nth-child(2):hover{
     background-color: var(--almost-black);
     color: var(--almost-white);
+}
+.desktop-nav{
+    display: none;
+}
+.right .buttons{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+    .container{
+        max-width: 95%;
+    }
+    .right .buttons{
+        display: flex;
+    }
+    header{
+        align-items: top;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    body{
+        height: 100vh;
+        padding: 0;
+        align-items: center;
+    }
+    .container{
+        height: auto;
+        gap: 3rem;
+        max-width: 1060px;
+        width: 100%;
+    }
+    .menu{
+        display: none;
+    }
+    .desktop-nav{
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+    }
+    .desktop-nav li{
+        position: relative;
+        padding: 0;
+        
+    }
+    .desktop-nav .options{
+        position: absolute;
+        min-width: 100%;
+        background-color: var(--almost-white);
+        border-radius: 10px;
+        top: 2.1rem;
+        overflow: hidden;
+        width: max-content;
+        height: 0;
+        box-shadow: 0px 0px 50px hsla(198, 17%, 46%, 0.205);
+        z-index: 100;
+        
+    
+    }
+    .desktop-nav .options.first{
+        right: 0;
+    }
+    .desktop-nav .options ul{
+        list-style: none;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding:1rem;
+        
+    }
+    .dropdown,
+    .desktop-main-nav{
+        padding: 0 .5rem .5rem .5rem;
+        display: flex;
+        max-width: max-content;
+        text-decoration: none;
+        color: var(--medium-gray);
+        cursor: pointer;
+        align-items: center;
+    }
+    .dropdown::after{
+        width: 0;
+        margin-left: 1rem;
+    }
+    .options li a{
+        gap: 1rem;
+        display: flex;
+        max-width: max-content;
+        text-decoration: none;
+        color: var(--medium-gray);
+        cursor: pointer;
+        align-items: center;
+        padding: .5rem;
+    }
+    .right{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex: 1;
+        align-items: center;
+    }
+    .right .buttons{
+        flex-direction: row;
+        margin-left: auto;
+    }
+    .right .buttons a {
+        padding: .3rem 1rem;
+        line-height: 1.55;
+    }
+    .mobile-image{
+        display: none;
+    }
+    .desktop-image{
+        display: block;
+        width: 100%;
+        height: auto;
+        min-width: 387px;
+        object-fit: cover;
+    }
+    .hero-section{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        width: 95%;
+        margin: auto;
+    }
+    .hero-details{
+        order: calc(-1);
+        padding: 0 1.5rem;
+        align-items: start;
+        justify-content: center;
+        text-align: start;
+        gap: 2rem;
+        width: 50%;
+        padding-top: 1.5rem;
+    }
+    .hero-details p{
+        padding-right: 3rem;
+    }
+    .image{
+        max-width: 446px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        font-size: 3.7rem;
+    }
+    .affiliated-companies{
+        margin-top: auto;
+    }
+}
+
+
+@media screen and (min-width:1328px){
+    .container{
+        max-width: 90%;
+    }
+    header{
+        gap: 3rem;
+    }
+    .hero-section{
+        width: 90%;
+    }
+    h1{
+        font-size: 4.1rem;
+    }
+}
+
+@media screen and (min-width:1370px){
+    .container{
+        max-width: 90%;
+    }
+    .hero-section{
+        max-width: 1162px;
+    }
+    h1{
+        font-size: 4.35rem;
+    }
 }

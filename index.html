@@ -10,10 +10,58 @@
 <body>
     <main class="container">
         <header>
-            <img src="images/logo.svg" alt="logo image" class="logo">
+            <div class="logo"><img src="images/logo.svg" alt="logo image"></div>
             <div class="right">
                 <img src="images/icon-menu.svg" alt="menu icon" class="menu" id="menu">
-                <ul><nav class="desktop-nav"></nav></ul>
+                <ul>
+                    <nav class="desktop-nav">
+                        <li>
+                            <span class="dropdown desktop">Features</span>
+                            <div class="options first">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="images/icon-todo.svg" alt="to do list icon">Todo List</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/icon-calendar.svg" alt="to do list icon">Calender</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/icon-reminders.svg" alt="to do list icon">Reminders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/icon-planning.svg" alt="to do list icon">Planning</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dropdown desktop">Company</span>
+                            <div class="options">
+                                <ul>
+                                    <li>
+                                        <a href="#">History</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="desktop-main-nav">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="desktop-main-nav">About</a>
+                        </li>
+                    </nav>
+                </ul>
+                <div class="buttons">
+                    <a href="#" class="link-btn login">Login</a>
+                    <a href="#" class="link-btn register">Register</a>
+                </div>
             </div>
             <div class="mobileNav-modal">
                 <div class="mobile-nav-container">
@@ -72,7 +120,8 @@
         </header>
         <section class="hero-section">
             <div class="image">
-                <img src="images/image-hero-mobile.png" alt="hero image">
+                <img src="images/image-hero-mobile.png" alt="hero image" class="mobile-image">
+                <img src="images/image-hero-desktop.png" alt="hero image" class="desktop-image">
             </div>
             <div class="hero-details">
                 <h1>Make remote work</h1>
