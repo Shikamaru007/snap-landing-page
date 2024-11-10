@@ -41,14 +41,15 @@ header{
     padding: 0 1.2rem;
 }
 .logo {
-    max-width: 6.5rem;
+    width: 6.5rem;
     display: flex;
-    flex-shrink: 0;
-    
 }
+
 .logo img {
     width: 100%;
-    min-width: 6.5rem;
+    height: auto;
+    max-height: 3rem;
+    object-fit: contain;
 }
 .desktop-image {
     display: none;
@@ -304,7 +305,7 @@ h1{
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        padding:1rem;
+        padding:1rem .8rem;
         
     }
     .dropdown,
@@ -316,6 +317,7 @@ h1{
         color: var(--medium-gray);
         cursor: pointer;
         align-items: center;
+        user-select: none;
     }
     .dropdown::after{
         width: 0;
@@ -411,7 +413,7 @@ h1{
         max-width: 90%;
     }
     .hero-section{
-        max-width: 1162px;
+        max-width: 1190px;
     }
     h1{
         font-size: 4.35rem;

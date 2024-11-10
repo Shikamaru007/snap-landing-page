@@ -10,6 +10,7 @@ closeMenu.addEventListener("click", () => {
 });
 dropDowns.forEach(dropdown => {
     dropdown.addEventListener("click", (event) => {
+        event.stopPropagation();
         event.target.classList.toggle("preview");
        let option = dropdown.parentNode.querySelector(".options");
        if(dropdown.classList.contains("preview")){
@@ -20,5 +21,15 @@ dropDowns.forEach(dropdown => {
       
     });
 });
+
+document.addEventListener("click", (event) => {
+    dropDowns.forEach(dropdown => {
+      const option = dropdown.parentNode.querySelector(".options");
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("preview");
+        option.style.height = "0px";
+      }
+    });
+  });
 
 
